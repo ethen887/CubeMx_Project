@@ -26,4 +26,5 @@ calendar/encoder.o: ..\Lib\Src\encoder.c ..\Lib\Inc\encoder.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Lib\Inc\oled.h ..\Lib\Inc\font.h ..\APP\Inc\main_task.h \
   ..\Lib\Inc\RTC_Tesk.h ..\Core\Inc\rtc.h ..\Core\Inc\usart.h \
-  ..\Core\Inc\tim.h
+  ..\Lib\Inc\ATH20.h ..\Core\Inc\i2c.h ..\Lib\Inc\bluetooth.h \
+  ..\Core\Inc\dma.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h

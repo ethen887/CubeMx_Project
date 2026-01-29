@@ -37,7 +37,17 @@ extern "C" {
 #include "RTC_Tesk.h"
 #include "stdio.h"
 #include "string.h"
-#include "encoder.h"
+#include "ATH20.h"
+#include "bluetooth.h"
+#include "HC_SR04.h"
+
+#include "dma.h"
+#include "i2c.h"
+#include "rtc.h"
+#include "tim.h"
+#include "usart.h"
+#include "gpio.h"
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

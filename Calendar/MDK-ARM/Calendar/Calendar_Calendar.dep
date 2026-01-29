@@ -1,8 +1,8 @@
 Dependencies for Project 'Calendar', Target 'Calendar': (DO NOT MODIFY !)
 CompilerVersion: 6220000::V6.22::ARMCLANG
-F (startup_stm32f103xb.s)(0x6978DB90)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o calendar/startup_stm32f103xb.o)
-F (../Core/Src/main.c)(0x697880A0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/main.o -MMD)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+F (startup_stm32f103xb.s)(0x697B8B86)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"STM32F10X_MD SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o calendar/startup_stm32f103xb.o)
+F (../Core/Src/main.c)(0x697B8B85)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/main.o -MMD)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -33,15 +33,17 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
 I (..\Core\Inc\dma.h)(0x697870A3)
-I (..\Core\Inc\i2c.h)(0x697870A3)
 I (..\Core\Inc\gpio.h)(0x697870A2)
-F (../Core/Src/gpio.c)(0x69787122)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/gpio.o -MMD)
+F (../Core/Src/gpio.c)(0x697B8A9B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/gpio.o -MMD)
 I (..\Core\Inc\gpio.h)(0x697870A2)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -72,12 +74,16 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
-F (../Core/Src/dma.c)(0x697870A3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/dma.o -MMD)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
 I (..\Core\Inc\dma.h)(0x697870A3)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+F (../Core/Src/dma.c)(0x697B1B39)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/dma.o -MMD)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -108,12 +114,16 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
-F (../Core/Src/i2c.c)(0x697870A3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/i2c.o -MMD)
-I (..\Core\Inc\i2c.h)(0x697870A3)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (../Core/Src/i2c.c)(0x697B20F0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/i2c.o -MMD)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -144,12 +154,16 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
 F (../Core/Src/rtc.c)(0x6978DABA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/rtc.o -MMD)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -179,47 +193,17 @@ I (..\Lib\Inc\oled.h)(0x6912F64B)
 I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
-F (../Core/Src/tim.c)(0x6978DB8F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/tim.o -MMD)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\main.h)(0x6978B6BF)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
-I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x68C58B6E)
-I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x68C58B6E)
-I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x68C58B6E)
-I (..\Drivers\CMSIS\Include\core_cm3.h)(0x68C58B64)
-I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
-I (..\Lib\Inc\oled.h)(0x6912F64B)
-I (..\Lib\Inc\font.h)(0x6912F64B)
-I (..\APP\Inc\main_task.h)(0x6978D26D)
-I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
-I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\usart.h)(0x697870A3)
-F (../Core/Src/usart.c)(0x697870A3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/usart.o -MMD)
-I (..\Core\Inc\usart.h)(0x697870A3)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (../Core/Src/tim.c)(0x697B8B85)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/tim.o -MMD)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -250,10 +234,16 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-F (../Core/Src/stm32f1xx_it.c)(0x69787122)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/stm32f1xx_it.o -MMD)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (../Core/Src/usart.c)(0x697B2E5C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/usart.o -MMD)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -284,12 +274,56 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
-I (..\Core\Inc\stm32f1xx_it.h)(0x69787123)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (../Core/Src/stm32f1xx_it.c)(0x697B2E5C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/stm32f1xx_it.o -MMD)
+I (..\Core\Inc\main.h)(0x697B29D9)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
+I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Include\core_cm3.h)(0x68C58B64)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
+I (..\Lib\Inc\oled.h)(0x6912F64B)
+I (..\Lib\Inc\font.h)(0x6912F64B)
+I (..\APP\Inc\main_task.h)(0x6978D26D)
+I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
+I (..\Core\Inc\rtc.h)(0x697870A3)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+I (..\Core\Inc\stm32f1xx_it.h)(0x697B2E5C)
 F (../Core/Src/stm32f1xx_hal_msp.c)(0x697870A3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/stm32f1xx_hal_msp.o -MMD)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -320,9 +354,14 @@ I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
 F (../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c)(0x68C58B6E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/stm32f1xx_hal_gpio_ex.o -MMD)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
@@ -794,45 +833,11 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
 F (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)()
 F (..\Lib\Inc\font.h)(0x6912F64B)()
 F (..\Lib\Inc\oled.h)(0x6912F64B)()
-F (..\Lib\Inc\encoder.h)(0x6978D110)()
-F (..\Lib\Src\encoder.c)(0x6979A1DE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/encoder.o -MMD)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\main.h)(0x6978B6BF)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
-I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x68C58B6E)
-I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x68C58B6E)
-I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x68C58B6E)
-I (..\Drivers\CMSIS\Include\core_cm3.h)(0x68C58B64)
-I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x68C58B6E)
-I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
-I (..\Lib\Inc\oled.h)(0x6912F64B)
-I (..\Lib\Inc\font.h)(0x6912F64B)
-I (..\APP\Inc\main_task.h)(0x6978D26D)
-I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
-I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
-I (..\Core\Inc\tim.h)(0x697870A3)
+F (..\Lib\Inc\encoder.h)(0x6979BEA1)()
+F (..\Lib\Inc\ATH20.h)(0x697B049B)()
 F (..\Lib\Src\RTC_Tesk.c)(0x69787E46)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/rtc_tesk.o -MMD)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -861,16 +866,21 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
 I (..\Lib\Inc\oled.h)(0x6912F64B)
 I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
 I (..\Core\Inc\rtc.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
 F (..\Lib\Src\font.c)(0x6912F64C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/font.o -MMD)
 I (..\Lib\Inc\font.h)(0x6912F64B)
 F (..\Lib\Src\oled.c)(0x6978B11D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/oled.o -MMD)
 I (..\Lib\Inc\oled.h)(0x6912F64B)
 I (..\Lib\Inc\font.h)(0x6912F64B)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -899,14 +909,98 @@ I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
-I (..\Core\Inc\i2c.h)(0x697870A3)
-F (..\APP\Inc\main_task.h)(0x6978D26D)()
-F (..\APP\Src\main_task.c)(0x6978D3E8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/main_task.o -MMD)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (..\Lib\Src\ATH20 .c)(0x697B24A8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o "calendar/ath20 .o" -MMD)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\main.h)(0x697B29D9)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
+I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Include\core_cm3.h)(0x68C58B64)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
+I (..\Lib\Inc\oled.h)(0x6912F64B)
+I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\APP\Inc\main_task.h)(0x6978D26D)
-I (..\Core\Inc\main.h)(0x6978B6BF)
+I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
+I (..\Core\Inc\rtc.h)(0x697870A3)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (..\Lib\Src\encoder.c)(0x697B32E2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/encoder.o -MMD)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)
+I (..\Core\Inc\main.h)(0x697B29D9)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
+I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f1xx.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\stm32f103xb.h)(0x68C58B6E)
+I (..\Drivers\CMSIS\Include\core_cm3.h)(0x68C58B64)
+I (..\Drivers\CMSIS\Device\ST\STM32F1xx\Include\system_stm32f1xx.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_gpio_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_exti.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_dma_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_cortex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_flash_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_i2c.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_pwr.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rtc_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h)(0x68C58B6E)
+I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h)(0x68C58B6E)
+I (..\Lib\Inc\oled.h)(0x6912F64B)
+I (..\Lib\Inc\font.h)(0x6912F64B)
+I (..\APP\Inc\main_task.h)(0x6978D26D)
+I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
+I (..\Core\Inc\rtc.h)(0x697870A3)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+F (..\APP\Inc\main_task.h)(0x6978D26D)()
+F (..\APP\Src\main_task.c)(0x6979D05E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../Lib/Inc -I ../Lib/Src -I ../APP/Inc -I ../APP/Src-I./RTE/_Calendar-ID:/Keil5/keil5_package/ARM/CMSIS/6.1.0/CMSIS/Core/Include-ID:/Keil5/keil5_package/Keil/STM32F1xx_DFP/2.4.1/Device/Include-D__UVISION_VERSION="541" -DSTM32F10X_MD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xB-o calendar/main_task.o -MMD)
+I (..\APP\Inc\main_task.h)(0x6978D26D)
+I (..\Core\Inc\main.h)(0x697B29D9)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h)(0x68C58B6E)
 I (..\Core\Inc\stm32f1xx_hal_conf.h)(0x697870A3)
 I (..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h)(0x68C58B6E)
@@ -936,6 +1030,11 @@ I (..\Lib\Inc\oled.h)(0x6912F64B)
 I (..\Lib\Inc\font.h)(0x6912F64B)
 I (..\Lib\Inc\RTC_Tesk.h)(0x69776F3B)
 I (..\Core\Inc\rtc.h)(0x697870A3)
-I (..\Lib\Inc\encoder.h)(0x6978D110)
-I (..\Core\Inc\tim.h)(0x697870A3)
-I (..\Core\Inc\usart.h)(0x697870A3)
+I (..\Lib\Inc\ATH20.h)(0x697B049B)
+I (..\Core\Inc\i2c.h)(0x697AE506)
+I (..\Core\Inc\usart.h)(0x697B2590)
+I (..\Lib\Inc\bluetooth.h)(0x697B8551)
+I (..\Core\Inc\dma.h)(0x697870A3)
+I (..\Core\Inc\tim.h)(0x697B8B85)
+I (..\Core\Inc\gpio.h)(0x697870A2)
+I (..\Lib\Inc\encoder.h)(0x6979BEA1)

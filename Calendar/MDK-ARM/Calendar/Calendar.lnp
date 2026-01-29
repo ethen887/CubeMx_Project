@@ -27,10 +27,11 @@
 "calendar\stm32f1xx_hal_tim_ex.o"
 "calendar\stm32f1xx_hal_uart.o"
 "calendar\system_stm32f1xx.o"
-"calendar\encoder.o"
 "calendar\rtc_tesk.o"
 "calendar\font.o"
 "calendar\oled.o"
+"calendar\ath20 .o"
+"calendar\encoder.o"
 "calendar\main_task.o"
 --strict --scatter "Calendar\Calendar.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
