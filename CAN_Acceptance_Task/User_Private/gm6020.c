@@ -103,8 +103,8 @@ void GM6020_Set_Voltage_5TO7( int16_t voltage5, int16_t voltage6, int16_t voltag
     if( voltage6 < GM6020_VOLTAGE_MIN ) voltage6 = GM6020_VOLTAGE_MIN;
     if( voltage7 > GM6020_VOLTAGE_MAX ) voltage7 = GM6020_VOLTAGE_MAX;
     if( voltage7 < GM6020_VOLTAGE_MIN ) voltage7 = GM6020_VOLTAGE_MIN;
-    Fill_Tx_Header(GM6020_CTRL_ID1TO4); // 配置身份标识
-    /* 按照协议打包 8 字节, 四个Pack分别对应四个电机的电压值 */
+    Fill_Tx_Header(GM6020_CTRL_ID5TO7); // 配置身份标识
+    /* 按照协议打包 8 字节, 三个个Pack分别对应四个电机的电压值 */
     Pack_int16(&s_tx_data[0],voltage5);
     Pack_int16(&s_tx_data[2],voltage6);
     Pack_int16(&s_tx_data[4],voltage7);
@@ -116,7 +116,6 @@ void GM6020_Set_Voltage_5TO7( int16_t voltage5, int16_t voltage6, int16_t voltag
 
 /* ================================================================
  * CAN 接收中断回调
- *
  * 函数名固定，由 HAL 库自动调用，禁止手动调用
  * 触发条件：FIFO0 中有新消息（由 ActivateNotification 设置）
  * ================================================================ */
@@ -128,7 +127,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     if( HAL_CAN_GetRxMessage( &hcan1, CAN_RX_FIFO0, &rx_header, rx_data ) != HAL_OK ) return;
     /* 软件过滤, 判断是否为GM6020的反馈帧( 因为在配置过滤器时, 所有的帧都通过过滤器, 所以这里需要软件过滤 ) */
     if( rx_header.StdId < 0x205 || rx_header.StdId > 0x20B) return; //此次中断不是我要处理的电机发来的,不进行处理
-    uint8_t motor_id = (uint8_t) (rx_header.StdId - 0x205); // 获取电机ID
+    uint8_t motor_id = (uint8_t) (rx_header.StdId - 0x204); // 获取电机ID
     /* 下面开始拼接数据 */
     gm6020[motor_id].angle = (uint16_t) ( (rx_data[0] << 8) | rx_data[1] ); // 角度值范围为0~8191, 直接使用无符号整型即可
     gm6020[motor_id].speed = (int16_t) ( (rx_data[2] << 8) | rx_data[3] );

@@ -103,6 +103,7 @@ int main(void)
     GM6020_Set_Voltage_1TO4(3000, 0, 0, 0); // 测试一下是否能够正常控制电机电压
     if( GM6020_IsOnline(1, 500) == OFFLINE ) flag = 0; // 检测电机是否在线, flag = 0 表示电机不在线, flag = 1 表示电机在线
     else flag = 1;
+    HAL_Delay(1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
