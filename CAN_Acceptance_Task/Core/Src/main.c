@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "gm6020.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,13 +91,18 @@ int main(void)
   MX_CAN1_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-
+  GM6020_CAN_Init(); // CAN初始化, 内部完成配置滤波器, 使能CAN, 开启中断回调
+  uint8_t flag = 1;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
+    GM6020_Set_Voltage_1TO4(3000, 0, 0, 0); // 测试一下是否能够正常控制电机电压
+    if( GM6020_IsOnline(1, 500) == OFFLINE ) flag = 0; // 检测电机是否在线, flag = 0 表示电机不在线, flag = 1 表示电机在线
+    else flag = 1;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -9,7 +9,7 @@
 
 /* 控制帧 CAN ID */
 #define GM6020_CTRL_ID1TO4  0x1FF // 控制报文标识符,用于单片机向ID为1-4的电机发送控制报文
-#define GM6020_CTRL_ID5TO8  0x2FF // 状态报文标识符,用于单片机向ID为5-7的电机发送状态报文 
+#define GM6020_CTRL_ID5TO8  0x2FF // 控制报文标识符,用于单片机向ID为5-7的电机发送状态报文 
 
 /* 反馈帧 CAN ID基础地址, 实际地址 = CAN_ID_BASE + 电机拨码ID */
 #define GM6020_FBK_ID_BASE   0x204 /* ID1 -> 0x205, ID7 -> 0x20B */
@@ -30,7 +30,11 @@
 /* =============================================================================
  * GM6020单个电机数据结构体
 *============================================================================*/
-
+typedef enum
+{
+    OFFLINE,
+    ONLINE
+}LineState;
 /*
 @brief  GM6020单个电机数据结构体,数据都由CAN反馈报文解析得到,都是数据手册中定义的,这些数据都是电机发送给单片机的数据
 @note   该结构体用于保存单个电机的数据
@@ -58,5 +62,9 @@ extern GM6020_t gm6020[8];
 /* =============================================================================
  * 函数声明
 *============================================================================*/
-
+void  GM6020_CAN_Init(void);
+void GM6020_Set_Voltage_1TO4( int16_t voltage1, int16_t voltage2, int16_t voltage3, int16_t voltage4  );
+void GM6020_Set_Voltage_5TO7( int16_t voltage5, int16_t voltage6, int16_t voltage7);
+float GM6020_GetAngleDeg(uint8_t id);
+uint8_t GM6020_IsOnline(uint8_t id, uint32_t timeout);
 #endif
