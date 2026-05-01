@@ -57,6 +57,8 @@ virtualFolder:
       files:
         - path: ../User_Private/gm6020.c
         - path: ../User_Private/gm6020.h
+        - path: ../User_Private/pid.h
+        - path: ../User_Private/pid.c
       folders: []
     - name: ::CMSIS
       files: []
@@ -89,29 +91,7 @@ targets:
         archExtensions: ""
         cpuType: Cortex-M4
         floatingPointHardware: single
-        options:
-          version: 4
-          afterBuildTasks: []
-          asm-compiler:
-            defines: []
-          beforeBuildTasks: []
-          c/cpp-compiler:
-            CXX_FLAGS: --diag_suppress=1 --diag_suppress=1295
-            C_FLAGS: --diag_suppress=1 --diag_suppress=1295
-            c99-mode: true
-            one-elf-section-per-function: true
-            optimization: level-3
-            warnings: all-warnings
-          global:
-            output-debug-info: enable
-            use-microLIB: false
-          linker:
-            $outputTaskExcludes:
-              - .bin
-            output-format: elf
-            ro-base: ""
-            rw-base: ""
-            xo-base: ""
+        options: ""
         scatterFilePath: ""
         storageLayout:
           RAM:
@@ -196,13 +176,17 @@ targets:
           afterBuildTasks: []
           asm-compiler:
             $use: asm-auto
+            defines: []
             misc-controls: ""
           beforeBuildTasks: []
           c/cpp-compiler:
             language-c: c99
             language-cpp: c++11
             link-time-optimization: false
-            optimization: level-0
+            one-elf-section-per-function: true
+            optimization: level-3
+            short-enums#wchar: true
+            warnings: ac5-like-warnings
           global:
             output-debug-info: enable
             use-microLIB: false
@@ -211,23 +195,82 @@ targets:
               - .bin
             misc-controls: --diag_suppress=L6329
             output-format: elf
-        scatterFilePath: <YOUR_SCATTER_FILE>.sct
+            ro-base: ""
+            rw-base: ""
+            xo-base: ""
+        scatterFilePath: ""
         storageLayout:
           RAM:
             - id: 1
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 2
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 3
+              isChecked: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              noInit: false
+              tag: RAM
+            - id: 1
               isChecked: true
               mem:
-                size: "0x5000"
+                size: "0x1c000"
                 startAddr: "0x20000000"
+              noInit: false
+              tag: IRAM
+            - id: 2
+              isChecked: true
+              mem:
+                size: "0x4000"
+                startAddr: "0x2001c000"
               noInit: false
               tag: IRAM
           ROM:
             - id: 1
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 3
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
+              tag: ROM
+            - id: 1
               isChecked: true
               isStartup: true
               mem:
-                size: "0x10000"
-                startAddr: "0x08000000"
+                size: "0x100000"
+                startAddr: "0x8000000"
+              tag: IROM
+            - id: 2
+              isChecked: false
+              isStartup: false
+              mem:
+                size: "0x0"
+                startAddr: "0x0"
               tag: IROM
         useCustomScatterFile: false
     uploadConfigMap:

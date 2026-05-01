@@ -1,6 +1,6 @@
 #include "gm6020.h"
 
-GM6020_t gm6020[8] = {0};
+GM6020_t gm6020[8] = {0}; // gm6020[0]不使用, gm6020[1]~gm6020[7]分别对应电机ID 1~7, 在CAN接收中断回调函数中更新数据, 在主函数中读取数据
 /* ============================================================================
  * 发送使用静态变量,仅在该文件中使用，其他文件无法调用
 *=============================================================================*/
@@ -124,7 +124,7 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     CAN_RxHeaderTypeDef rx_header;
     uint8_t rx_data[8];
     /* 从FIFO0 中取出一帧数据  */
-    if( HAL_CAN_GetRxMessage( &hcan1, CAN_RX_FIFO0, &rx_header, rx_data ) != HAL_OK ) return;
+    if( HAL_CAN_GetRxMessage( hcan, CAN_RX_FIFO0, &rx_header, rx_data ) != HAL_OK ) return;
     /* 软件过滤, 判断是否为GM6020的反馈帧( 因为在配置过滤器时, 所有的帧都通过过滤器, 所以这里需要软件过滤 ) */
     if( rx_header.StdId < 0x205 || rx_header.StdId > 0x20B) return; //此次中断不是我要处理的电机发来的,不进行处理
     uint8_t motor_id = (uint8_t) (rx_header.StdId - 0x204); // 获取电机ID

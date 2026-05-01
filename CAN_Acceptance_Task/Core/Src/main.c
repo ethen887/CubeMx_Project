@@ -25,6 +25,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "gm6020.h"
+#include "pid.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,6 +36,17 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define TARGET_SPEED 150.0f // 目标速度, 单位为RPM, 可以根据需要调整
+#define INTERGRAL_MAX 10000.0f // PID积分限幅
+#define OUTPUT_MAX 25000.0f // PID输出限幅
+/* PID参数设置 */
+#define KP 10.0f // 比例增益
+#define KI 1.50f // 积分增益
+#define KD 0.01f // 微分增益
+/* 控制周期（单位：ms）
+ * 建议1ms，和电机反馈频率匹配
+ * 如果改这个值，Ki需要同步调整（Ki_new = Ki_old × 新周期/旧周期）*/
+#define CONTROL_PERIOD  1
 
 /* USER CODE END PD */
 
@@ -45,7 +58,16 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+PID_T pid_speed; // 定义一个PID控制器实例, 用于速度控制
+float Target_Speed_Sin( )
+{
+  uint32_t static last_time = 0;
+  /* 模拟正弦波 */
+  float frequency = 50.0f;
+  float result = 100.0f * sin( 2.0f * 3.14f * frequency * ( HAL_GetTick() - last_time ) / 1000.0f );
+  last_time = HAL_GetTick();
+  return result;
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,6 +114,7 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   GM6020_CAN_Init(); // CAN初始化, 内部完成配置滤波器, 使能CAN, 开启中断回调
+  PID_Init(&pid_speed, KP, KI, KD, INTERGRAL_MAX, OUTPUT_MAX); // 初始化PID控制器
   uint8_t flag = 1;
   /* USER CODE END 2 */
 
@@ -100,10 +123,16 @@ int main(void)
   while (1)
   {
 
-    GM6020_Set_Voltage_1TO4(3000, 0, 0, 0); // 测试一下是否能够正常控制电机电压
+    // GM6020_Set_Voltage_5TO7(3000, 3000, 3000); // 测试一下是否能够正常控制电机电压
+    
+    // GM6020_Set_Voltage_1TO4(0, 3000, 3000, 3000); // 测试一下是否能够正常控制电机电压
     if( GM6020_IsOnline(1, 500) == OFFLINE ) flag = 0; // 检测电机是否在线, flag = 0 表示电机不在线, flag = 1 表示电机在线
     else flag = 1;
-    HAL_Delay(1);
+    float actual_speed = (float)gm6020[1].speed; // 获取电机1的实际速度, 单位为RPM
+    float target_speed = Target_Speed_Sin(); // 获取目标速度, 这里用一个正弦函数模拟目标速度的变化
+    float voltage = PID_Calculate(&pid_speed, TARGET_SPEED, actual_speed); // 计算PID控制器输出的电压值
+    GM6020_Set_Voltage_1TO4(voltage, 0 ,0, voltage); // 输出电压控制电机1, 电机2-4不控制
+    HAL_Delay(CONTROL_PERIOD); // 控制周期, 建议1ms, 和电机反馈频率匹配
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

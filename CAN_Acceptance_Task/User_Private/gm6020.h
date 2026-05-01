@@ -9,7 +9,7 @@
 
 /* 控制帧 CAN ID */
 #define GM6020_CTRL_ID1TO4  0x1FF // 控制报文标识符,用于单片机向ID为1-4的电机发送控制报文
-#define GM6020_CTRL_ID5TO8  0x2FF // 控制报文标识符,用于单片机向ID为5-7的电机发送状态报文 
+#define GM6020_CTRL_ID5TO7  0x2FF // 控制报文标识符,用于单片机向ID为5-7的电机发送状态报文 
 
 /* 反馈帧 CAN ID基础地址, 实际地址 = CAN_ID_BASE + 电机拨码ID */
 #define GM6020_FBK_ID_BASE   0x204 /* ID1 -> 0x205, ID7 -> 0x20B */
