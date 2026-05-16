@@ -36,7 +36,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define TARGET_SPEED 150.0f // 目标速度, 单位为RPM, 可以根据需要调整
+#define USE_FIXED_SPEED //使用固定速度模式, 若要使用正弦波速度模式, 注释掉这一行, 并取消注释USE_SIN_SPEED
+// #define USE_SIN_SPEED
+#define TARGET_SPEED 100.0f
 #define INTERGRAL_MAX 10000.0f // PID积分限幅
 #define OUTPUT_MAX 25000.0f // PID输出限幅
 /* PID参数设置 */
@@ -64,8 +66,7 @@ float Target_Speed_Sin( )
   uint32_t static last_time = 0;
   /* 模拟正弦波 */
   float frequency = 50.0f;
-  float result = 100.0f * sin( 2.0f * 3.14f * frequency * ( HAL_GetTick() - last_time ) / 1000.0f );
-  last_time = HAL_GetTick();
+  float result = 100.0f * sin( 2.0f * 3.14f * frequency * ( HAL_GetTick()) / 1000.0f );
   return result;
 }
 /* USER CODE END PV */
@@ -129,9 +130,14 @@ int main(void)
     if( GM6020_IsOnline(1, 500) == OFFLINE ) flag = 0; // 检测电机是否在线, flag = 0 表示电机不在线, flag = 1 表示电机在线
     else flag = 1;
     float actual_speed = (float)gm6020[1].speed; // 获取电机1的实际速度, 单位为RPM
-    float target_speed = Target_Speed_Sin(); // 获取目标速度, 这里用一个正弦函数模拟目标速度的变化
-    float voltage = PID_Calculate(&pid_speed, TARGET_SPEED, actual_speed); // 计算PID控制器输出的电压值
-    GM6020_Set_Voltage_1TO4(voltage, 0 ,0, voltage); // 输出电压控制电机1, 电机2-4不控制
+/* 确定控制模式 */    
+#ifdef USE_FIXED_SPEED
+    float target_speed = TARGET_SPEED;
+#else
+    float target_speed = Target_Speed_Sin();
+#endif
+    float voltage = PID_Calculate(&pid_speed, target_speed, actual_speed); // 计算PID控制器输出的电压值
+    GM6020_Set_Voltage_1TO4(0, 0 ,0, voltage); // 输出电压控制电机4, 电机1-3不控制
     HAL_Delay(CONTROL_PERIOD); // 控制周期, 建议1ms, 和电机反馈频率匹配
     /* USER CODE END WHILE */
 

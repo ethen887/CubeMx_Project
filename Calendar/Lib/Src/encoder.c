@@ -148,10 +148,12 @@ void EncoderJudge(void)
     }
     else
     {
-        pressed_time = 0; //重置按键时间
-        callback_state = 0; //重置回调函数调用状态
+        pressed_time = 0; // Clear press timestamp when button is released
+        callback_state = 0; // Re-arm callback state for the next valid press
     }
     
+
+
 
 }
 

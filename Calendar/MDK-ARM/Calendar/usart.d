@@ -27,4 +27,5 @@ calendar/usart.o: ..\Core\Src\usart.c ..\Core\Inc\usart.h \
   ..\Lib\Inc\oled.h ..\Lib\Inc\font.h ..\APP\Inc\main_task.h \
   ..\Lib\Inc\RTC_Tesk.h ..\Core\Inc\rtc.h ..\Lib\Inc\encoder.h \
   ..\Core\Inc\tim.h ..\Lib\Inc\ATH20.h ..\Core\Inc\i2c.h \
-  ..\Lib\Inc\bluetooth.h ..\Core\Inc\dma.h ..\Core\Inc\gpio.h
+  ..\Lib\Inc\bluetooth.h ..\Lib\Inc\HC_SR04.h ..\Core\Inc\dma.h \
+  ..\Core\Inc\gpio.h

@@ -108,9 +108,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   __HAL_RCC_AFIO_CLK_ENABLE();
   __HAL_AFIO_REMAP_SWJ_NOJTAG();
-  // MainTaskInit();
-  char buffer[100];
-  float temperature = 0, humidity = 0;
+  MainTaskInit();
   
   /* USER CODE END 2 */
 
@@ -118,14 +116,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    sprintf(buffer, "time: %d m \r\n",HC_SR04_Hight_Time() );
-    HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
-    HAL_Delay(1000);
-    //MainTask();
-    /*下面这个函数里面的HAL_Delay()会对MainTask()函数产生阻塞, 从而造成显示屏出现问题, 因此后续改用FreeRTOS进行改善*/
-    //AHT20_Get_Data(&temperature,&humidity);
-    /* USER CODE END WHILE */
-
+    
+    MainTask();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

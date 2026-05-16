@@ -26,5 +26,6 @@ calendar/main_task.o: ..\APP\Src\main_task.c ..\APP\Inc\main_task.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
   ..\Lib\Inc\oled.h ..\Lib\Inc\font.h ..\Lib\Inc\RTC_Tesk.h \
   ..\Core\Inc\rtc.h ..\Lib\Inc\ATH20.h ..\Core\Inc\i2c.h \
-  ..\Core\Inc\usart.h ..\Lib\Inc\bluetooth.h ..\Core\Inc\dma.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\gpio.h ..\Lib\Inc\encoder.h
+  ..\Core\Inc\usart.h ..\Lib\Inc\bluetooth.h ..\Lib\Inc\HC_SR04.h \
+  ..\Core\Inc\dma.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h \
+  ..\Lib\Inc\encoder.h

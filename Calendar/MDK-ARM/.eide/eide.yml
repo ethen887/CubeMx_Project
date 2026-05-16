@@ -62,23 +62,19 @@ virtualFolder:
       folders:
         - name: Inc
           files:
+            - path: ../Lib/Inc/RTC_Tesk.h
             - path: ../Lib/Inc/font.h
             - path: ../Lib/Inc/oled.h
-            - path: ../Lib/Inc/RTC_Tesk.h
             - path: ../Lib/Inc/encoder.h
             - path: ../Lib/Inc/ATH20.h
-            - path: ../Lib/Inc/bluetooth.h
-            - path: ../Lib/Inc/HC_SR04.h
           folders: []
         - name: Src
           files:
+            - path: ../Lib/Src/RTC_Tesk.c
             - path: ../Lib/Src/font.c
             - path: ../Lib/Src/oled.c
-            - path: ../Lib/Src/RTC_Tesk.c
-            - path: ../Lib/Src/encoder.c
             - path: ../Lib/Src/ATH20 .c
-            - path: ../Lib/Src/bluetooth.c
-            - path: ../Lib/Src/HC_SR04_.c
+            - path: ../Lib/Src/encoder.c
           folders: []
     - name: APP
       files: []
@@ -129,6 +125,7 @@ targets:
           afterBuildTasks: []
           asm-compiler:
             $use: asm-auto
+            defines: []
             misc-controls: ""
           beforeBuildTasks: []
           c/cpp-compiler:

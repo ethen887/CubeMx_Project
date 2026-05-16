@@ -27,4 +27,5 @@ calendar/ath20\ .o: ..\Lib\Src\ATH20\ .c ..\Lib\Inc\ATH20.h \
   ..\Lib\Inc\oled.h ..\Lib\Inc\font.h ..\APP\Inc\main_task.h \
   ..\Lib\Inc\RTC_Tesk.h ..\Core\Inc\rtc.h ..\Lib\Inc\encoder.h \
   ..\Core\Inc\tim.h ..\Core\Inc\usart.h ..\Lib\Inc\bluetooth.h \
-  ..\Core\Inc\dma.h ..\Core\Inc\i2c.h ..\Core\Inc\gpio.h
+  ..\Lib\Inc\HC_SR04.h ..\Core\Inc\dma.h ..\Core\Inc\i2c.h \
+  ..\Core\Inc\gpio.h
